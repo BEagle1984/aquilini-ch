@@ -3,56 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>aquilini.ch</title>
-    <style>
-        :root {
-            --shadow-color: #00aa00;
-            --shadow-color-light: #000000;
-        }
-
-        body {
-            background-color: #111111;
-        }
-
-        div {
-            height: 100px;
-            width: 100%;
-            position: absolute;
-            top: 50%;
-            left: 0;
-            margin-top: -50px;
-        }
-
-        p {
-            font-family: Consolas, monospace;
-            vertical-align: center;
-            text-align: center;
-            color: #00aa00;
-            font-size: 5em;
-            animation: neon 3s infinite;
-        }
-
-        @keyframes neon {
-            0% {
-                text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
-                0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
-                0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
-            }
-            50% {
-                text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
-                0 0 5px var(--shadow-color-light), 0 0 15px var(--shadow-color-light), 0 0 25px var(--shadow-color-light),
-                0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 60px var(--shadow-color), 0 0 80px var(--shadow-color), 0 0 110px var(--shadow-color), 0 0 210px var(--shadow-color);
-            }
-            100% {
-                text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
-                0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
-                0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
-            }
-        }
-    </style>
+    <script src="https://kit.fontawesome.com/e3306be642.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animations.css">
 </head>
-<body>
-<div>
-    <p>C0M1NG S00N</p>
+<body class="crt">
+<div id="container">
+    <div id="title">Sergio <span class="accent">Aquilini</span></div>
+    <div id="subtitle">Just a <span class="accent">software architect</span> and very passionate <span class="accent">developer</span>.</div>
+    <div id="buttons">
+        <a class="btn btn-outline-light" href="https://github.com/BEagle1984" rel="nofollow noopener noreferrer">
+            <i class='fab fa-github'></i> BEagle1984
+        </a>
+        <a class="btn btn-outline-light" href="https://www.linkedin.com/in/aquilinis/" rel="nofollow noopener noreferrer">
+            <i class='fab fa-linkedin'></i> aquilinis
+        </a>
+        <a class="btn btn-outline-light" href="https://twitter.com/thebeagle1984" rel="nofollow noopener noreferrer">
+            <i class='fab fa-twitter'></i> thebeagle1984
+        </a>
+        <a class="btn btn-outline-light" href="mailto:sergio@aquilini.ch" rel="nofollow noopener noreferrer">
+            <i class='fas fa-envelope'></i> sergio@aquilini.ch
+        </a>
+    </div>
 </div>
 </body>
 </html>
