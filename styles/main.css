@@ -31,6 +31,12 @@ body {
     border-color: var(--terminal-foreground);
 }
 
+div#buttons .btn-outline-light {
+    width: 100%;
+    float: left;
+    clear: both;
+}
+
 div#container {
     padding: 50px 10px;
 }
