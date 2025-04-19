@@ -1,9 +1,10 @@
 :root {
     --terminal-font: WhiteRabbit, Consolas, monospace;
-    --terminal-font-size: 1.5em;
+    --terminal-font-size: 1.2em;
     --terminal-background: #111;
     --terminal-foreground: #ccc;
     --accent-color: #0c0;
+    --link-color: #0c0;
 }
 
 @font-face {
@@ -17,8 +18,13 @@ body {
     font-size: var(--terminal-font-size);
 }
 
-.accent {
+em {
     color: var(--accent-color);
+    font-style: normal;
+}
+
+.smaller {
+    font-size: 0.8em;
 }
 
 .btn {
@@ -31,36 +37,42 @@ body {
     border-color: var(--terminal-foreground);
 }
 
-div#buttons .btn-outline-light {
-    width: 100%;
-    float: left;
-    clear: both;
-}
-
-div#container {
-    padding: 50px 10px;
-}
-
 div#container div {
     font-family: var(--terminal-font);
     vertical-align: center;
-    text-align: center;
-    margin: 0 auto 50px auto;
+    text-align: left;
+    margin: 50px auto 50px auto;
     width: fit-content;
+    max-width: 70%;
 }
 
 div#title {
-    text-transform: uppercase;
-    font-size: 3em;
     border: 4px double var(--terminal-foreground);
-    padding: 0 30px 0 30px;
+    padding: 10px 30px 10px 30px;
+}
+
+h1 {
+    font-size: 3em;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    margin: 50px 0 30px 0;
+    color: var(--accent-color);
 }
 
 div#subtitle {
 }
 
 div#buttons {
-    margin-top: 100px !important;
+    margin-top: 20px !important;
+    animation: buttons 3s infinite;
+}
+
+div#contacts {
+    margin-top: 50px !important;
     animation: buttons 3s infinite;
 }
 
@@ -95,4 +107,43 @@ div#buttons {
 
 .crt {
     animation: textShadow 1.6s infinite;
+}
+
+#resume, #resume p, #resume h2 {
+    text-align: justify;
+}
+
+a, a:hover {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a::after {
+    content: '↗';
+    font-size: 0.6em;
+    position: relative;
+    top: -0.4em;
+}
+
+a.btn::after {
+    content: '';
+}
+
+ul {
+    list-style: none;
+    padding-left: 0px;
+    position: relative;
+    margin: 0;
+}
+
+ul li {
+    position: relative;
+    padding-left: 1em;
+    margin-bottom: 0.5em;
+}
+
+ul li::before {
+    content: '>';
+    position: absolute;
+    left: 0;
 }

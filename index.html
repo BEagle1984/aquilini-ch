@@ -11,22 +11,141 @@
 </head>
 <body class="crt">
 <div id="container">
-    <div id="title">Sergio <span class="accent">Aquilini</span></div>
-    <div id="subtitle">Just a <span class="accent">software architect</span> and very passionate <span class="accent">developer</span>.</div>
+    <div id="title"><h1>Sergio <em>Aquilini</em></h1></div>
+    <div id="subtitle">Just a <em>software architect</em> and very passionate <em>developer</em>.</div>
     <div id="buttons">
-        <p>Follow or contact me:</p>
-        <a class="btn btn-outline-light" href="https://github.com/BEagle1984" rel="nofollow noopener noreferrer">
-            <i class='fab fa-github'></i> BEagle1984
+        <a class="btn btn-outline-light" href="#"
+           onclick="document.body.classList.toggle('crt');">
+            Toggle CRT Effect
         </a>
-        <a class="btn btn-outline-light" href="https://www.linkedin.com/in/aquilinis/" rel="nofollow noopener noreferrer">
-            <i class='fab fa-linkedin'></i> aquilinis
-        </a>
-        <a class="btn btn-outline-light" href="https://twitter.com/thebeagle1984" rel="nofollow noopener noreferrer">
-            <i class='fab fa-twitter'></i> thebeagle1984
-        </a>
-        <a class="btn btn-outline-light" href="mailto:sergio@aquilini.ch" rel="nofollow noopener noreferrer">
-            <i class='fas fa-envelope'></i> sergio@aquilini.ch
-        </a>
+    </div>
+    <div id="resume">
+        <h2>Professional Summary</h2>
+        <p>
+            I’m Sergio Aquilini, a passionate and forward-thinking Solution Architect and Senior .NET Developer with
+            over 20 years of professional experience.
+            I specialize in modern software architecture, microservices, asynchronous messaging, and high-quality
+            software delivery.
+            I have a strong track record of leading complex projects from concept to production, delivering robust and
+            scalable enterprise systems.
+        </p>
+
+        <h2>Current Role</h2>
+        <p>
+            At <em>Swiss Post</em>, I serve as a <em>Solution Architect</em>
+            within the Logistics Services
+            cluster, with a particular focus on the domain of sorting. Among other responsibilities, I actively
+            contribute to the <em>Sorting Solutions</em> team, where we are shaping the next
+            generation of sorting systems.
+        </p>
+        <p>
+            Our solutions are built on a modern, <em>cloud-native</em> stack based on
+            <em>.NET</em>, <em>Kafka</em>, and <em>MQTT</em>,
+            deployed on <em>AWS EKS</em>. We rely on <em>PostgreSQL</em> and
+            <em>MongoDB</em> for data storage, and use <em>Splunk</em> and
+            <em>Grafana</em> extensively to ensure deep <em>observability</em>
+            into our systems.
+        </p>
+        <p>
+            We embrace <em>DevOps</em> principles and take full ownership of the services we build,
+            from design through deployment to production operation. Our development process is trunk-based, with
+            <em>continuous delivery</em> and fully <em>automated testing</em>. We
+            maintain 100% test coverage and avoid any manual testing entirely.
+        </p>
+        <p>
+            A key part of our engineering culture is a zero-error/warning policy in production. We continuously refine
+            our codebase and application logs to ensure that the systems remain clean, observable, and reliable. This
+            commitment to quality and transparency is fundamental to our ability to move fast and
+            <em>deliver with confidence</em>.
+        </p>
+
+        <h2>Past Projects</h2>
+        <p>
+            I led the architectural modernization of the E-Post Office platform (now rebranded as ePost), evolving it
+            from a legacy monolith into a scalable, cloud-native solution based on microservices using .NET Core and
+            NativeScript.
+            The platform integrates tightly with various internal and external systems, with a strong emphasis on
+            automation, testing, and high-quality continuous delivery.
+        </p>
+
+        <h2>Open Source</h2>
+        <p>
+            I’m the author and maintainer of
+            <a href="https://www.silverback-messaging.net" target="_blank">Silverback</a>, a powerful, elegant, and
+            feature-rich message bus for .NET, designed to simplify <em>asynchronous messaging</em>,
+            <em>event-driven architectures</em>, and microservice communication.
+            With seamless integration for <em>Apache Kafka</em> and <em>MQTT</em>,
+            it offers robust capabilities for reliability, consistency, and scalability.
+        </p>
+        <p>
+            <a href="https://www.silverback-messaging.net" target="_blank">Silverback</a> started as a personal side
+            project, driven by the need for a better messaging abstraction during the early stages of the ePost
+            platform. Over time, it evolved into a mature and production-grade framework that is now the standard
+            messaging solution for all .NET applications at Swiss Post.
+        </p>
+        <p>
+            Maintaining <a href="https://www.silverback-messaging.net" target="_blank">Silverback</a> continues to be a
+            source of inspiration and technical growth. Its inherently asynchronous and distributed nature introduces
+            unique engineering challenges—such as race conditions, delivery guarantees, concurrency handling, and
+            integration complexity. Tackling these problems pushes me to continuously refine the architecture and
+            deliver solutions that are both performant and developer-friendly.
+        </p>
+
+        <h2>Work Experience</h2>
+        <ul class="text-start d-inline-block">
+            <li>2017 – present<br/><em>Solution Architect</em>, Swiss Post<br/>
+                E-Post Office, Sorting Solutions, Architecture, Messaging, Cloud-Native Systems.
+            </li>
+            <li>2005 – 2017<br/><em>Senior .NET Developer</em>, Swiss Post<br/>
+                E-Commerce, Postshop.ch, Silverlight, .NET Framework, Team Leadership.
+            </li>
+            <li>2004 – 2005<br/><em>.NET Developer</em>, SUPSI (iCIMSI)<br/>
+                International research projects, workflow systems in ASP.NET.
+            </li>
+        </ul>
+
+        <h2>Education</h2>
+        <ul class="text-start d-inline-block">
+            <li>Bachelor in Computer Science, SUPSI, In Progress</li>
+            <li>Informatics Diploma (AFC), SPAI, 2003</li>
+            <li>Professional Technical Maturity, SPAI, 2003</li>
+        </ul>
+
+        <h2>Certifications</h2>
+        <ul class="text-start d-inline-block">
+            <li>SAFe&reg; 6 Architect, Scaled Agile Inc.</li>
+            <li>Scrum Developer Certified, SCRUMStudy</li>
+            <li>iSAQB Certified Professional for Software Architecture – Foundation Level, iSAQB&reg;</li>
+        </ul>
+
+        <h2>Skills</h2>
+        <p>
+            .NET, C#, Entity Framework, WPF, Kafka, MQTT, Kubernetes, Docker, AWS, Terraform, SQL Server, PostgreSQL,
+            MongoDB, Angular, TypeScript, Git, CI/CD, Trunk-Based Development, Microservices, Event-Driven Architecture,
+            Test Automation, Clean Code, Agile Development, Domain-Driven Design, Software Design Patterns.
+        </p>
+
+        <h2>Languages</h2>
+        <ul class="text-start d-inline-block">
+            <li>Italian – Native</li>
+            <li>English – C1</li>
+            <li>German – B2</li>
+            <li>French – A2</li>
+        </ul>
+    </div>
+    <div id="contacts">
+        <p>Follow or contact me:
+            <a class="btn btn-outline-light" href="https://github.com/BEagle1984" rel="nofollow noopener noreferrer">
+                <i class='fab fa-github'></i> BEagle1984
+            </a>
+            <a class="btn btn-outline-light" href="https://www.linkedin.com/in/aquilinis/"
+               rel="nofollow noopener noreferrer">
+                <i class='fab fa-linkedin'></i> aquilinis
+            </a>
+            <a class="btn btn-outline-light" href="mailto:sergio@aquilini.ch" rel="nofollow noopener noreferrer">
+                <i class='fas fa-envelope'></i> sergio@aquilini.ch
+            </a>
+        </p>
     </div>
 </div>
 </body>
