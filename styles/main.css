@@ -37,25 +37,41 @@ em {
     border-color: var(--terminal-foreground);
 }
 
+div#container {
+    padding: 50px 20px;
+    align-self: center;
+}
+
 div#container div {
     font-family: var(--terminal-font);
     vertical-align: center;
     text-align: left;
-    margin: 50px auto 50px auto;
-    width: fit-content;
-    max-width: 70%;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    max-width: 1200px;
+}
+
+@media (max-width: 1000px) {
+    div#container {
+        font-size: 1.5em;
+    }
 }
 
 div#title {
-    border: 4px double var(--terminal-foreground);
-    padding: 10px 30px 10px 30px;
+    width: 100%;
+    align-content: center !important;
+    text-align: center;
 }
 
 h1 {
     font-size: 3em;
+    border: 4px double var(--terminal-foreground);
     text-transform: uppercase;
-    margin: 0;
-    padding: 0;
+    margin: 0 auto 20px auto;
+    padding: 10px 30px 10px 30px;
+    width: fit-content;
+    text-align: center;
 }
 
 h2 {
@@ -64,10 +80,12 @@ h2 {
 }
 
 div#subtitle {
+    text-align: center !important;
+    width: 100%;
 }
 
 div#buttons {
-    margin-top: 20px !important;
+    margin-top: 40px !important;
     animation: buttons 3s infinite;
 }
 
