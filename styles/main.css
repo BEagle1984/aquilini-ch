@@ -52,20 +52,27 @@ div#container div {
     max-width: 1200px;
 }
 
-div#title {
-    width: 100%;
-    align-content: center !important;
-    text-align: center;
-}
-
 h1 {
     font-size: 3em;
-    border: 4px double var(--terminal-foreground);
     text-transform: uppercase;
-    margin: 0 auto 20px auto;
-    padding: 10px 30px 10px 30px;
-    width: fit-content;
-    text-align: center;
+}
+div#bio {
+    margin-bottom: 100px !important;
+}
+
+div#bio img {
+    height: 350px;
+    border-radius: 20%;
+    margin: 20px 50px 20px 0;
+    float: left;
+}
+
+div#bio-details {
+    padding: 30px 0 0 0 !important;
+}
+
+div#bio-details span {
+    text-wrap: nowrap;
 }
 
 h2 {
@@ -74,13 +81,9 @@ h2 {
     color: var(--accent-color);
 }
 
-div#subtitle {
-    text-align: center !important;
-    width: 100%;
-}
-
 div#buttons {
-    margin-top: 40px !important;
+    clear: both;
+    margin-bottom: 50px !important;
     animation: buttons 3s infinite;
 }
 
@@ -132,7 +135,7 @@ a, a:hover {
 }
 
 a::after {
-    content: '↗';
+    content: ' ↗';
     font-size: 0.6em;
     position: relative;
     top: -0.4em;
@@ -167,6 +170,18 @@ ul li::before {
     }
 
     h1 {
-        font-size: 2.5em;
+        font-size: 2em;
+        margin: 10px 0 20px 0;
+    }
+
+    div#bio img {
+        float: none;
+        width: 100%;
+        height: auto;
+        margin: 0 50px 0 20px;
+    }
+
+    div#bio div#bio-details {
+        clear: both;
     }
 }
