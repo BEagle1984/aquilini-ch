@@ -15,82 +15,10 @@
 body {
     background-color: var(--terminal-background);
     color: var(--terminal-foreground);
+    font-family: var(--terminal-font), monospace;
     font-size: var(--terminal-font-size);
 }
 
-em {
-    color: var(--accent-color);
-    font-style: normal;
-}
-
-.smaller {
-    font-size: 0.8em;
-}
-
-.btn {
-    font-size: inherit !important;
-    margin: 10px 0;
-}
-
-.btn-outline-light {
-    color: var(--terminal-foreground);
-    border-color: var(--terminal-foreground);
-}
-
-div#container {
-    padding: 50px 20px;
-    align-self: center;
-}
-
-div#container div {
-    font-family: var(--terminal-font);
-    vertical-align: center;
-    text-align: left;
-    margin: 0 auto;
-    padding: 0;
-    width: 100%;
-    max-width: 1200px;
-}
-
-h1 {
-    font-size: 3em;
-    text-transform: uppercase;
-}
-div#bio {
-    margin-bottom: 100px !important;
-}
-
-div#bio img {
-    height: 350px;
-    border-radius: 20%;
-    margin: 20px 50px 20px 0;
-    float: left;
-}
-
-div#bio-details {
-    padding: 30px 0 0 0 !important;
-}
-
-div#bio-details span {
-    text-wrap: nowrap;
-}
-
-h2 {
-    margin: 50px 0 30px 0;
-    font-size: 2em;
-    color: var(--accent-color);
-}
-
-div#buttons {
-    clear: both;
-    margin-bottom: 50px !important;
-    animation: buttons 3s infinite;
-}
-
-div#contacts {
-    margin-top: 50px !important;
-    animation: buttons 3s infinite;
-}
 
 .crt::after {
     content: " ";
@@ -125,43 +53,145 @@ div#contacts {
     animation: textShadow 1.6s infinite;
 }
 
-#resume, #resume p, #resume h2 {
-    text-align: justify;
-}
-
-a, a:hover {
-    color: var(--link-color);
-    text-decoration: none;
-}
-
-a::after {
-    content: ' ↗';
-    font-size: 0.6em;
-    position: relative;
-    top: -0.4em;
-}
-
-a.btn::after {
-    content: '';
-}
-
-ul {
-    list-style: none;
-    padding-left: 0px;
-    position: relative;
+div#menu {
+    float: left;
+    width: 100%;
+    background-color: var(--accent-color);
+    color: var(--terminal-background);
     margin: 0;
+    padding: 0px;
+    line-height: 1em;
+
+    a {
+        display: block;
+        float: left;
+        width: fit-content;
+        color: var(--terminal-background);
+        /*background-color: var(--terminal-foreground);*/
+        text-decoration: none;
+        padding: 5px 10px;
+        margin: 0;
+        border-right: var(--terminal-background) solid 3px;
+    }
+
+    a:hover {
+        color: var(--terminal-foreground);
+        background-color: var(--terminal-background);
+        text-decoration: none;
+        margin: 0;
+    }
 }
 
-ul li {
-    position: relative;
-    padding-left: 1em;
-    margin-bottom: 0.5em;
+em {
+    color: var(--accent-color);
+    font-style: normal;
 }
 
-ul li::before {
-    content: '>';
-    position: absolute;
-    left: 0;
+.smaller {
+    font-size: 0.8em;
+}
+
+.btn {
+    font-size: inherit !important;
+    margin: 10px 0;
+}
+
+.btn-outline-light {
+    color: var(--terminal-foreground);
+    border-color: var(--terminal-foreground);
+}
+
+div#container {
+    padding: 50px 20px;
+    align-self: center;
+
+    div {
+        vertical-align: center;
+        text-align: left;
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
+        max-width: 1200px;
+    }
+
+    h1 {
+        font-size: 3em;
+        text-transform: uppercase;
+    }
+
+    div#bio {
+        margin-bottom: 50px !important;
+
+        img {
+            height: 350px;
+            margin-right: 20px;
+            float: left;
+        }
+    }
+
+    div#bio-details {
+        padding: 30px 0 0 0 !important;
+
+        span {
+            text-wrap: nowrap;
+        }
+    }
+
+    h2 {
+        margin: 50px 0 30px 0;
+        font-size: 2em;
+        color: var(--accent-color);
+    }
+
+    div#buttons {
+        clear: both;
+        margin-bottom: 50px !important;
+        animation: buttons 3s infinite;
+    }
+
+    div#contacts {
+        margin-top: 50px !important;
+        animation: buttons 3s infinite;
+    }
+
+    #resume, #resume p, #resume h2 {
+        text-align: justify;
+    }
+
+    a, a:hover {
+        color: var(--link-color);
+        text-decoration: none;
+    }
+
+    a::after {
+        content: ' ↗';
+        font-size: 0.6em;
+        position: relative;
+        top: -0.4em;
+    }
+
+    a.btn::after {
+        content: '';
+    }
+
+    ul {
+        list-style: none;
+        padding-left: 0px;
+        position: relative;
+        margin: 0;
+    }
+
+    ul li {
+        position: relative;
+        padding-left: 1em;
+        margin-bottom: 0.5em;
+    }
+
+    ul li::before {
+        content: '>';
+        position: absolute;
+        left: 0;
+    }
 }
 
 div#footer {
@@ -172,6 +202,10 @@ div#footer {
 }
 
 @media (max-width: 1000px) {
+    div#menu {
+        font-size: 2em;
+    }
+
     div#container {
         font-size: 2em;
     }
@@ -184,11 +218,12 @@ div#footer {
     div#bio img {
         float: none;
         width: 100%;
-        height: auto;
-        margin: 0 50px 0 20px;
+        height: auto !important;
+        margin: 0;
+        /*margin: 0 50px 0 20px;*/
     }
 
-    div#bio div#bio-details {
+    div#bio-details {
         clear: both;
     }
 }
