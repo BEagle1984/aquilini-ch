@@ -95,7 +95,7 @@ div#contacts {
 .crt::after {
     content: " ";
     display: block;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
@@ -110,7 +110,7 @@ div#contacts {
 .crt::before {
     content: " ";
     display: block;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
@@ -162,6 +162,13 @@ ul li::before {
     content: '>';
     position: absolute;
     left: 0;
+}
+
+div#footer {
+    margin-top: 50px !important;
+    padding: 20px 0;
+    text-align: center !important;
+    font-size: 0.8em;
 }
 
 @media (max-width: 1000px) {
