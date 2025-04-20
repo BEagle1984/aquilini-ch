@@ -4,51 +4,56 @@
     <meta charset="UTF-8">
     <title>aquilini.ch</title>
     <script src="https://kit.fontawesome.com/e3306be642.js" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/main.css?v=2.0">
+    <link rel="stylesheet" href="styles/main-v2.css?v=1">
     <link rel="stylesheet" href="styles/animations.css?v=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body class="crt">
+<body>
 <div id="menu">
     <a href="/">Resume</a>
-    <a href="#" onclick="document.body.classList.toggle('crt');">Toggle CRT Effect</a>
 </div>
 <div id="container">
     <div id="title">
-        <div>
-            <h1>Sergio <em>Aquilini</em></h1>
-            <p>Just a <em>software architect</em> and very passionate <em>developer</em>.</p>
-        </div>
+        <h1>Sergio <em>Aquilini</em></h1>
+        <p class="subtitle">Just a <em>software architect</em> and very passionate <em>developer</em></p>
     </div>
     <div id="bio">
-        <img src="images/portrait-transparent.png" alt="Portrait of Sergio Aquilini"/>
+        <img src="images/portrait-transparent-outline.png" alt="Portrait of Sergio Aquilini" class="crt"/>
         <div id="bio-details">
             <p>
-                <b>Born</b><br/> 1984
+                <b>Born</b><br/>
+                1984
             </p>
             <p>
-                <b>Location</b><br/> Mesocco, Switzerland
+                <b>Location</b><br/>
+                Mesocco, Switzerland
             </p>
             <p>
-                <b>Languages</b><br/> <span>Italian (native),</span> <span>English (C1),</span>
+                <b>Languages</b><br/>
+                <span>Italian (native),</span> <span>English (C1),</span>
                 <span>German (B2),</span> <span>French (A2)</span>
             </p>
             <p>
-                <b><i class='fas fa-envelope'></i> Mail:</b> <a
-                    href="mailto:sergio@aquilini.ch">sergio@aquilini.ch</a><br/>
-                <b><i class='fab fa-github'></i> GitHub:</b> <a href="https://github.com/BEagle1984"
-                                                                target="_blank">BEagle1984</a><br/>
-                <b><i class='fab fa-linkedin'></i> LinkedIn:</b> <a href="https://www.linkedin.com/in/aquilinis/"
-                                                                    target="_blank">aquilinis</a><br/>
+                <b>Mail</b><br/>
+                <a href="mailto:sergio@aquilini.ch">sergio@aquilini.ch</a><br/>
+            </p>
+            <p>
+                <b>GitHub</b><br/>
+                <a href="https://github.com/BEagle1984" target="_blank"><i class='fab fa-github'></i>
+                    BEagle1984</a><br/>
+            </p>
+            <p>
+                <b>LinkedIn</b><br/>
+                <a href="https://www.linkedin.com/in/aquilinis/" target="_blank"><i class='fab fa-linkedin'></i>
+                    aquilinis</a><br/>
             </p>
         </div>
     </div>
     <div id="resume">
         <h2>Professional Summary</h2>
         <p>
-            I’m Sergio Aquilini, a passionate and forward-thinking Solution Architect and Senior .NET Developer with
-            over 20 years of professional experience.
+            I’m <em>Sergio Aquilini</em>, a passionate and forward-thinking <em>Solution Architect</em> and Senior <em>.NET
+            Developer</em> with over 20 years of professional experience.
             I specialize in modern software architecture, microservices, asynchronous messaging, and high-quality
             software delivery.
             I have a strong track record of leading complex projects from concept to production, delivering robust and
@@ -153,32 +158,24 @@
         </ul>
 
         <h2>Skills</h2>
-        <p>
-            .NET, C#, Entity Framework, WPF, Kafka, MQTT, Kubernetes, Docker, AWS, Terraform, SQL Server, PostgreSQL,
-            MongoDB, Angular, TypeScript, Git, CI/CD, Trunk-Based Development, Microservices, Event-Driven Architecture,
-            Test Automation, Clean Code, Agile Development, Domain-Driven Design.
-        </p>
+        <ul>
+            <li><b>Expert</b><br/>.NET, C#, Entity Framework, Kafka, MQTT, Kubernetes, Docker, AWS, CI/CD, GIT,
+                Microservices, Event-Driven Architecture, Clean Code
+            </li>
+            <li><b>Advanced</b><br/>PostgreSQL, MongoDB, WPF, Terraform, Angular, TypeScript, Test Automation</li>
+            <li><b>Core Practices</b><br/>Trunk-Based Development, Agile Development, Domain-Driven Design</li>
+            <li><b>Basic Knowledge</b><br/>Java (Spring Boot), Python, C/C++</li>
+        </ul>
 
-        <h2>Beyond Work</h2>
-        <p>
-            Lifting heavy things in the gym, exploring the world above and below water, playing video games, and —
-            unsurprisingly — writing code for fun.
-        </p>
-
-    </div>
-    <div id="contacts">
-        <p>Follow or contact me:<br/>
-            <a class="btn btn-outline-light" href="https://github.com/BEagle1984" rel="nofollow noopener noreferrer">
-                <i class='fab fa-github'></i> BEagle1984
-            </a>
-            <a class="btn btn-outline-light" href="https://www.linkedin.com/in/aquilinis/"
-               rel="nofollow noopener noreferrer">
-                <i class='fab fa-linkedin'></i> aquilinis
-            </a>
-            <a class="btn btn-outline-light" href="mailto:sergio@aquilini.ch" rel="nofollow noopener noreferrer">
-                <i class='fas fa-envelope'></i> sergio@aquilini.ch
-            </a>
-        </p>
+        <h2>Hobbies</h2>
+        <ul>
+            <li>Lifting heavy things in the gym 💪</li>
+            <li>Exploring the world above and below water (scuba diving) ✈️🏝️🤿</li>
+            <li>Tinkering with networks, gadgets, and all kinds of nerdy side projects 💡</li>
+            <li>DIY 🛠️</li>
+            <li>Video games 🕹️</li>
+            <li>Coding 🤓</li>
+        </ul>
     </div>
 </div>
 <div id="footer">
