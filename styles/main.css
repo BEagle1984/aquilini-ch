@@ -116,19 +116,26 @@ div#container {
         max-width: 1200px;
     }
 
-    h1 {
-        font-family: var(--title-font), serif;
-        font-size: 3.7em;
-        text-transform: uppercase;
-        margin-bottom: 0;
-        text-shadow: 4px 3px var(--shadow-color);
-    }
+    #title {
+        align-content: center;
+        width: 100%;
 
-    p.subtitle {
-        font-size: 1.6em;
-        font-family: var(--title-font), serif;
-        margin: 5px 0 50px 2px;
-        text-shadow: 3px 2px var(--shadow-color);
+        h1 {
+            font-family: var(--title-font), serif;
+            font-size: 3.7em;
+            text-transform: uppercase;
+            margin: 0 auto;
+            width: fit-content;
+            text-shadow: 4px 3px var(--shadow-color);
+        }
+
+        p.subtitle {
+            font-size: 1.6em;
+            font-family: var(--title-font), serif;
+            margin: 5px auto 50px auto;
+            width: fit-content;
+            text-shadow: 3px 2px var(--shadow-color);
+        }
     }
 
     div#bio {
