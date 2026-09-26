@@ -7,8 +7,8 @@ const { runInNewContext } = require('node:vm');
 const source = readFileSync(join(__dirname, '../scripts/loader.js'), 'utf8');
 
 function setup(pathname, fetch) {
-    const links = ['/', '/resume.html'].map(path => ({
-        href: `https://aquilini.ch${path}`,
+    const links = ['https://aquilini.ch/', 'https://aquilini.ch/resume.html', 'https://laquietedelbosco.ch/'].map(href => ({
+        href,
         attributes: {},
         setAttribute(name, value) { this.attributes[name] = value; },
         removeAttribute(name) { delete this.attributes[name]; }
@@ -20,7 +20,7 @@ function setup(pathname, fetch) {
     let ready;
     runInNewContext(source, {
         URL,
-        window: { location: { pathname } },
+        window: { location: { pathname, origin: 'https://aquilini.ch' } },
         document: {
             getElementById: () => menu,
             addEventListener: (_, callback) => { ready = callback; }
