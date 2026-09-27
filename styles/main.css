@@ -145,9 +145,9 @@ h3 { font-size: 1.0625rem; font-weight: 650; line-height: 1.45; margin: 0 0 0.45
     #menu a { padding-inline: 0.5rem; }
     #container { width: calc(100% - 2rem); padding-top: 2rem; }
     #title { margin-bottom: 1.75rem; }
-    #bio { grid-template-columns: 5.5rem minmax(0, 1fr); gap: 1rem; padding: 1.25rem 1rem 0; margin-bottom: 2rem; }
-    #bio > img { width: 5.5rem; }
-    #bio-details { padding-bottom: 1.25rem; font-size: 0.9375rem; }
+    #bio { grid-template-columns: minmax(0, 1fr); padding: 1.25rem; margin-bottom: 2rem; }
+    #bio > img { display: none; }
+    #bio-details { padding-bottom: 0; font-size: 0.9375rem; }
     .contact-links { gap: 0.35rem 1rem; }
     #resume section + section { margin-top: 2.25rem; }
     .skills > div { grid-template-columns: 1fr; gap: 0.2rem; }
