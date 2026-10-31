@@ -1,0 +1,36 @@
+---
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/main.css';
+import '../styles/animations.css';
+
+interface Props {
+    title: string;
+    description: string;
+    copyright: string;
+    bodyClass?: string;
+}
+
+const { title, description, copyright, bodyClass } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicon/site.webmanifest">
+</head>
+<body class={bodyClass}>
+<a class="skip-link" href="#container">Skip to content</a>
+<Nav/>
+<main id="container" tabindex="-1">
+    <slot/>
+</main>
+<Footer copyright={copyright}/>
+</body>
+</html>

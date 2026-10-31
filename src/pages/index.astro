@@ -1,0 +1,37 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import sergio from '../assets/images/portrait-sergio-cartoon.png';
+import mandy from '../assets/images/portrait-mandy-cartoon.png';
+import bnbLogo from '../assets/images/la-quiete-del-bosco-logo-white.png';
+---
+<Layout title="Sergio & Mandy Aquilini | aquilini.ch"
+        description="The personal website of Sergio and Mandy Aquilini."
+        copyright="Sergio & Mandy Aquilini"
+        bodyClass="home">
+    <div id="splash">
+        <div id="splash-images">
+            <a href="/resume.html" title="Sergio Aquilini">
+                <Image src={sergio} height={256} densities={[1, 2]} loading="eager" alt="Illustrated portrait of Sergio Aquilini" title="Sergio Aquilini"/>
+            </a>
+            <a href="https://laquietedelbosco.ch/" target="_blank" rel="noopener noreferrer" aria-label="Mandy Aquilini: La Quiete del Bosco B&amp;B">
+                <Image src={mandy} height={256} densities={[1, 2]} loading="eager" alt="Illustrated portrait of Mandy Aquilini" title="Mandy Aquilini"/>
+            </a>
+        </div>
+        <h1 class="terminal-title"><em>Aquilini</em>.ch</h1>
+        <div class="cards">
+            <a class="card card-sergio" href="/resume.html">
+                <span class="card-kicker">Sergio</span>
+                <span class="card-title">Software architect by trade, coder at heart</span>
+                <span class="card-text">20+ years building software, and still coding, mostly in .NET.</span>
+                <span class="card-cta">Read the r&eacute;sum&eacute; <span aria-hidden="true">&rarr;</span></span>
+            </a>
+            <a class="card card-mandy" href="https://laquietedelbosco.ch/" target="_blank" rel="noopener noreferrer">
+                <span class="card-kicker">Mandy</span>
+                <Image class="bnb-logo" src={bnbLogo} width={176} densities={[1, 2]} loading="eager" alt="La Quiete del Bosco Boutique B&B"/>
+                <span class="card-text">Our boutique B&amp;B in Mesocco, brought to life by Mandy.</span>
+                <span class="card-cta">Discover our B&amp;B <span aria-hidden="true">&#8599;</span></span>
+            </a>
+        </div>
+    </div>
+</Layout>

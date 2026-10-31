@@ -1,0 +1,17 @@
+---
+import Icon from './Icon.astro';
+
+interface Props {
+    copyright: string;
+}
+
+const { copyright } = Astro.props;
+---
+<footer id="footer">
+    <div class="footer-links" aria-label="Sergio&rsquo;s contact and profiles">
+        <a href="mailto:sergio@aquilini.ch" aria-label="Email Sergio"><Icon name="email"/></a>
+        <a href="https://github.com/BEagle1984" target="_blank" rel="noopener noreferrer" aria-label="Sergio on GitHub"><Icon name="github"/></a>
+        <a href="https://www.linkedin.com/in/aquilinis/" target="_blank" rel="noopener noreferrer" aria-label="Sergio on LinkedIn"><Icon name="linkedin"/></a>
+    </div>
+    <p>&copy; {new Date().getFullYear()} {copyright}</p>
+</footer>

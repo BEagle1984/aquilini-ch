@@ -1,78 +1,42 @@
 # aquilini.ch
 
-## Local preview
+Personal website built with [Astro](https://astro.build) and published to GitHub Pages.
 
-### Requirements
+## Structure
 
-- PowerShell.
-- Docker Desktop running with Linux containers and Docker Compose v2 available
-  through `docker compose` (including support for `up --wait`).
-- Internet access on the first run to download the nginx image.
+- `src/pages/`: one `.astro` file per page (`index.astro` → `/`, `resume.astro` → `/resume.html`).
+- `src/layouts/Layout.astro`: shared `<head>`, navigation and footer.
+- `src/components/`: navigation, footer and SVG icons.
+- `src/styles/`, `src/fonts/`: stylesheets and fonts, bundled with hashed filenames at build time.
+- `src/assets/images/`: source images. Images rendered with `<Image>` are resized and converted to WebP
+  at build time; unused ones are not published.
+- `public/`: copied to the site as-is (favicons, `CNAME`).
 
-### Start the preview
+To add a page, create `src/pages/<name>.astro` using `Layout`, then add it to the `links` list in
+`src/components/Nav.astro`.
 
-Open PowerShell in the repository directory and run:
+## Local development
 
-```powershell
-.\preview.ps1
-```
-
-The script starts nginx and prints the preview links after verifying that it responds:
-
-- [Homepage](http://localhost:8080/)
-- [Resume](http://localhost:8080/resume.html)
-
-The first run downloads the nginx image. Local edits appear after refreshing the
-browser; no rebuild is needed. Only website files are mounted, read-only, and the
-server is bound to the local machine.
-
-The container runs in the background, so closing the terminal does not stop it.
-This is a local preview only; it does not publish the website.
-
-### Use another port
+Requires Node.js 24 (or 22.23+), the same major version CI uses.
 
 ```powershell
-.\preview.ps1 -Port 8081
+npm install
+npm run dev
 ```
 
-Open the URLs printed by the script, for example `http://localhost:8081/`.
-Running the script again reuses the preview service. Changing the port recreates it;
-it does not start a second preview. Omitting `-Port` switches back to port 8080.
+Open http://localhost:4321/. Changes reload in the browser automatically.
 
-### Stop the preview
+To check the production build:
 
 ```powershell
-.\preview.ps1 -Stop
+npm run build
+npm test
+npm run preview
 ```
 
-This removes the preview container and its Compose network. Your files and the
-downloaded nginx image are retained. You do not need to specify a custom port when
-stopping.
+`npm test` checks the generated `dist/` folder, so run it after a build.
 
-### Run from another directory
+## Deployment
 
-Invoke the script by its full path; it locates `compose.yaml` relative to itself:
-
-```powershell
-& 'D:\source\aquilini-ch\preview.ps1'
-```
-
-### Troubleshooting
-
-- **Docker cannot be reached:** start Docker Desktop, wait for its engine to be
-  ready, and check that it is using Linux containers.
-- **Port already in use:** choose another port with `-Port`.
-- **Changes are not visible:** refresh the page, or use a hard refresh to reload
-  cached CSS and images. There is no automatic browser reload.
-- **localhost does not respond:** try `http://127.0.0.1:8080/`, using your selected
-  port if different.
-
-To inspect nginx logs, run this from the repository directory:
-
-```powershell
-docker compose --project-name aquilini-ch-preview --file compose.yaml logs --tail 100 preview
-```
-
-Only the HTML files and asset directories listed in `compose.yaml` are served. If
-you add another top-level page or asset directory, add its read-only mount there
-and rerun the preview script.
+`.github/workflows/deploy.yml` builds and tests every push and pull request. Pushes to `master`
+are then deployed to GitHub Pages. The repository's Pages source must be set to **GitHub Actions**.

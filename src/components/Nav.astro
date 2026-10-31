@@ -1,0 +1,16 @@
+---
+const links = [
+    { href: '/', label: 'Home' },
+    { href: '/resume.html', label: 'Sergio’s résumé' },
+];
+
+// Astro.url.pathname is /resume in dev and /resume.html in the build; compare without the extension.
+const normalize = (path: string) => path.replace(/(index)?\.html$/, '').replace(/(.)\/$/, '$1');
+const current = normalize(Astro.url.pathname);
+---
+<nav id="menu" aria-label="Main navigation">
+    {links.map(({ href, label }) => (
+        <a href={href} aria-current={normalize(href) === current ? 'page' : undefined}>{label}</a>
+    ))}
+    <a href="https://laquietedelbosco.ch/" target="_blank" rel="noopener noreferrer">Our B&amp;B <span aria-hidden="true">&#8599;</span></a>
+</nav>
